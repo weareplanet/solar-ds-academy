@@ -7,7 +7,7 @@ Hi, I need an app registration in our Planet Entra ID tenant for a training cour
 - **Name:** Solar DS Academy
 - **Supported account types:** Accounts in this organizational directory only (single tenant)
 - **Platform:** Single-page application (SPA)
-- **Redirect URI:** `https://weareplanet.github.io/solar-ds-academy`
+- **Redirect URI:** `https://friendly-adventure-3q7jm84.pages.github.io`
 
 ## 2. Values I need back
 

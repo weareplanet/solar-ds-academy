@@ -7,7 +7,7 @@ import { Configuration, LogLevel } from '@azure/msal-browser';
  * 1. Go to Azure Portal → Entra ID → App registrations → New registration
  * 2. Name: "Solar DS Academy"
  * 3. Supported account types: "Accounts in this organizational directory only" (single tenant)
- * 4. Redirect URI (SPA): https://weareplanet.github.io/solar-ds-academy
+ * 4. Redirect URI (SPA): https://friendly-adventure-3q7jm84.pages.github.io
  * 5. Copy the Application (client) ID and Tenant ID below
  */
 
@@ -16,7 +16,7 @@ const CLIENT_ID = process.env.NEXT_PUBLIC_MSAL_CLIENT_ID || 'YOUR_CLIENT_ID';
 const TENANT_ID = process.env.NEXT_PUBLIC_MSAL_TENANT_ID || 'YOUR_TENANT_ID';
 const REDIRECT_URI =
   process.env.NEXT_PUBLIC_MSAL_REDIRECT_URI ||
-  'https://weareplanet.github.io/solar-ds-academy';
+  'https://friendly-adventure-3q7jm84.pages.github.io';
 
 export const msalConfig: Configuration = {
   auth: {
