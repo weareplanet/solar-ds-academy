@@ -8,18 +8,37 @@ import {
 } from '@azure/msal-browser';
 import { msalConfig, loginRequest } from '@/lib/msalConfig';
 
-const msalInstance = new PublicClientApplication(msalConfig);
+// Skip MSAL when credentials are not configured (local dev)
+const isMsalConfigured =
+  msalConfig.auth.clientId !== 'YOUR_CLIENT_ID' &&
+  msalConfig.auth.clientId !== '';
+
+const msalInstance = isMsalConfigured
+  ? new PublicClientApplication(msalConfig)
+  : null;
+
+const DEV_ACCOUNT = {
+  username: 'dev@weareplanet.com',
+  name: 'Local Developer',
+  homeAccountId: 'dev',
+  localAccountId: 'dev',
+  environment: 'dev',
+  tenantId: 'dev',
+} as AccountInfo;
 
 interface AuthGateProps {
   children: ReactNode;
 }
 
 export function AuthGate({ children }: AuthGateProps) {
-  const [account, setAccount] = useState<AccountInfo | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [account, setAccount] = useState<AccountInfo | null>(
+    isMsalConfigured ? null : DEV_ACCOUNT,
+  );
+  const [loading, setLoading] = useState(isMsalConfigured);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!msalInstance) return; // Skip init in dev mode
     const init = async () => {
       try {
         await msalInstance.initialize();
@@ -45,6 +64,7 @@ export function AuthGate({ children }: AuthGateProps) {
   }, []);
 
   const handleLogin = async () => {
+    if (!msalInstance) return;
     try {
       await msalInstance.loginRedirect(loginRequest);
     } catch (err) {
@@ -58,6 +78,7 @@ export function AuthGate({ children }: AuthGateProps) {
   };
 
   const handleLogout = async () => {
+    if (!msalInstance) return;
     await msalInstance.logoutRedirect();
   };
 

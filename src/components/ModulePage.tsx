@@ -1,12 +1,20 @@
 'use client';
 
+import { ReactNode, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { modules } from '@/lib/modules';
 import { useAuth } from '@/components/AuthGate';
 import { useProgress } from '@/components/ProgressTracker';
+import { TopicNav, type TopicHeading } from '@/components/TopicNav';
+import { ModuleSidebar } from '@/components/ModuleSidebar';
 
-export function ModulePage() {
+interface ModulePageProps {
+  slidesContent?: ReactNode;
+  topicHeadings?: TopicHeading[];
+}
+
+export function ModulePage({ slidesContent, topicHeadings = [] }: ModulePageProps) {
   const params = useParams();
   const id = params.id as string;
   const { account, logout } = useAuth();
@@ -32,12 +40,17 @@ export function ModulePage() {
   const prevModule = modules.find((m) => m.number === mod.number - 1);
 
   // Mark as started when viewing
-  if (status === 'not-started') {
-    markStarted(id);
-  }
+  useEffect(() => {
+    if (status === 'not-started') {
+      markStarted(id);
+    }
+  }, [id, status, markStarted]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex">
+      <ModuleSidebar />
+
+      <div className="flex-1 min-w-0">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -52,6 +65,8 @@ export function ModulePage() {
           </span>
         </div>
       </header>
+
+      <TopicNav headings={topicHeadings} />
 
       <main className="max-w-4xl mx-auto px-4 py-10">
         {/* Module header */}
@@ -73,10 +88,9 @@ export function ModulePage() {
           <section className="bg-white rounded-xl border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">📖 Lesson Content</h2>
             <div className="prose prose-gray max-w-none">
-              <p className="text-gray-500 italic">
-                Content for Module {mod.number} will be loaded from{' '}
-                <code>content/module-{mod.id}/slides.md</code>
-              </p>
+              {slidesContent || (
+                <p className="text-gray-500 italic">No lesson content available yet.</p>
+              )}
             </div>
           </section>
 
@@ -88,15 +102,18 @@ export function ModulePage() {
             </div>
           </section>
 
-          {/* Exercise section */}
-          <section className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">🏋️ Exercise</h2>
-            <div className="prose prose-gray max-w-none">
-              <p className="text-gray-500 italic">
-                Exercises for Module {mod.number} will be loaded from{' '}
-                <code>content/module-{mod.id}/exercise.md</code>
-              </p>
+          {/* Exercise link */}
+          <section className="bg-white rounded-xl border border-gray-200 p-6 flex items-center justify-between">
+            <div>
+              <h2 className="text-lg font-semibold text-gray-900">🏋️ Exercise</h2>
+              <p className="text-gray-500 text-sm mt-1">Hands-on practice for Module {mod.number}</p>
             </div>
+            <Link
+              href={`/module/${mod.id}/exercise`}
+              className="bg-planet-600 hover:bg-planet-700 text-white font-semibold py-2 px-5 rounded-lg transition-colors text-sm"
+            >
+              Go to Exercise →
+            </Link>
           </section>
 
           {/* Quiz link */}
@@ -153,6 +170,7 @@ export function ModulePage() {
           )}
         </div>
       </main>
+      </div>
     </div>
   );
 }

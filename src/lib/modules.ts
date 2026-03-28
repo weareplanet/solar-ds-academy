@@ -70,4 +70,34 @@ export const modules: ModuleInfo[] = [
       'Navigate GitHub confidently for product work (no coding required).',
     icon: '🐙',
   },
+  {
+    id: '07',
+    number: 7,
+    title: 'VS Code: Features & Navigation',
+    level: 'Beginner',
+    duration: '45 min',
+    description:
+      'Master the VS Code interface — panels, Command Palette, terminal, extensions, and shortcuts.',
+    icon: '💻',
+  },
+  {
+    id: '08',
+    number: 8,
+    title: 'GitHub Copilot Chat Deep Dive',
+    level: 'Beginner–Intermediate',
+    duration: '60 min',
+    description:
+      'Modes, models, attachments, tools & MCPs, approvals, and how to send messages effectively.',
+    icon: '🤖',
+  },
+  {
+    id: '09',
+    number: 9,
+    title: 'Advanced Prompting Strategies',
+    level: 'Intermediate–Advanced',
+    duration: '60 min',
+    description:
+      'Decision frameworks for choosing the right mode (Ask, Edit, Agent) and the right model for every task.',
+    icon: '🧠',
+  },
 ];

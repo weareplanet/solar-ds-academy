@@ -7,13 +7,13 @@ const quizData: Record<string, QuizQuestion[]> = {
       question: 'Where do you open the Copilot Chat panel?',
       options: [
         'File → New Window',
-        'Cmd+Shift+I or the chat icon in the sidebar',
+        'Cmd+Shift+I (macOS) / Ctrl+Shift+I (Windows) or the chat icon in the sidebar',
         'Terminal → New Terminal',
         'View → Extensions',
       ],
       correctIndex: 1,
       explanation:
-        'The Copilot Chat panel opens with Cmd+Shift+I (macOS) or by clicking the chat icon in the Activity Bar.',
+        'The Copilot Chat panel opens with Cmd+Shift+I (macOS) or Ctrl+Shift+I (Windows/Linux), or by clicking the chat icon in the Activity Bar.',
     },
     {
       id: '01-2',
@@ -396,6 +396,207 @@ const quizData: Record<string, QuizQuestion[]> = {
       correctIndex: 2,
       explanation:
         "GitHub Releases contain downloadable artifacts (like .vsix files) and release notes for each version.",
+    },
+  ],
+  '07': [
+    {
+      id: '07-1',
+      question: 'What keyboard shortcut opens the Command Palette?',
+      options: [
+        '⌘ P / Ctrl P',
+        '⌘ Shift P / Ctrl Shift P',
+        '⌘ Shift F / Ctrl Shift F',
+        '⌘ B / Ctrl B',
+      ],
+      correctIndex: 1,
+      explanation:
+        '⌘ Shift P (macOS) or Ctrl Shift P (Windows/Linux) opens the Command Palette — the go-to for any action.',
+    },
+    {
+      id: '07-2',
+      question: 'What does the Activity Bar do?',
+      options: [
+        'Displays open tabs',
+        'Shows the terminal output',
+        'Lets you switch between panels like Explorer, Search, and Extensions',
+        'Runs your application',
+      ],
+      correctIndex: 2,
+      explanation:
+        'The Activity Bar (left edge) contains icons that switch between major panels: Explorer, Search, Source Control, Extensions, and Chat.',
+    },
+    {
+      id: '07-3',
+      question: 'How do you open a file quickly by name?',
+      options: [
+        'File → Open',
+        '⌘ P / Ctrl P (Quick Open)',
+        'Right-click the Explorer',
+        '⌘ Shift F / Ctrl Shift F',
+      ],
+      correctIndex: 1,
+      explanation:
+        '⌘ P (macOS) or Ctrl P (Windows/Linux) opens Quick Open, which lets you jump to any file by typing part of its name.',
+    },
+    {
+      id: '07-4',
+      question: 'Where does the integrated terminal appear?',
+      options: [
+        'In a separate application window',
+        'In the Side Bar',
+        'In a panel at the bottom of VS Code',
+        'In the Status Bar',
+      ],
+      correctIndex: 2,
+      explanation:
+        'The integrated terminal opens in the bottom panel. Toggle it with Ctrl ` (both platforms) or ⌘ J (macOS).',
+    },
+    {
+      id: '07-5',
+      question: 'How do you install a VS Code extension?',
+      options: [
+        'Download it from a website and drag it into VS Code',
+        'Type "install" in the terminal',
+        'Click the Extensions icon (⌘ Shift X / Ctrl Shift X), search, and click Install',
+        'Extensions install automatically',
+      ],
+      correctIndex: 2,
+      explanation:
+        'Open the Extensions panel with ⌘ Shift X (macOS) or Ctrl Shift X (Windows/Linux), search for the extension by name, and click Install.',
+    },
+  ],
+  '08': [
+    {
+      id: '08-1',
+      question: 'What are the three Copilot Chat modes?',
+      options: [
+        'Read, Write, Execute',
+        'Ask, Edit, Agent',
+        'Chat, Code, Deploy',
+        'Simple, Advanced, Expert',
+      ],
+      correctIndex: 1,
+      explanation:
+        'The three modes are Ask (read-only Q&A), Edit (targeted file changes), and Agent (autonomous multi-step tasks).',
+    },
+    {
+      id: '08-2',
+      question: 'Which mode should you use with @Solar?',
+      options: [
+        'Ask mode',
+        'Edit mode',
+        'Agent mode',
+        'Any mode works the same',
+      ],
+      correctIndex: 2,
+      explanation:
+        '@Solar needs Agent mode because it reads files, runs terminal commands, and edits multiple files autonomously.',
+    },
+    {
+      id: '08-3',
+      question: 'How do you attach context to a Copilot Chat message?',
+      options: [
+        'Copy-paste the file contents into the chat',
+        'Type # and select an attachment (e.g., #file, #browser, #codebase)',
+        'Email the file to Copilot',
+        'Open the file in a new window',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Type # in the chat input to see available attachments like #file, #browser, #terminal, and #codebase.',
+    },
+    {
+      id: '08-4',
+      question: 'What is an MCP server?',
+      options: [
+        'A cloud hosting service for your app',
+        'A plugin that gives Copilot access to external tools and services',
+        'A testing framework',
+        'A VS Code theme pack',
+      ],
+      correctIndex: 1,
+      explanation:
+        'MCP (Model Context Protocol) servers are plugins that connect Copilot to external tools like Figma, GitHub, and databases.',
+    },
+    {
+      id: '08-5',
+      question: 'What does "Autopilot" mode do?',
+      options: [
+        'Writes code without any prompt',
+        'Lets Copilot run all actions automatically without asking for approval each time',
+        'Deploys your app to production',
+        'Switches between models automatically',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Autopilot lets Copilot execute actions (file edits, terminal commands, tool calls) without manual approval for each step.',
+    },
+  ],
+  '09': [
+    {
+      id: '09-1',
+      question: 'You want to understand what a piece of code does without changing anything. Which mode should you use?',
+      options: [
+        'Agent mode',
+        'Edit mode',
+        'Ask mode',
+        'Any mode — they all explain code',
+      ],
+      correctIndex: 2,
+      explanation:
+        'Ask mode is read-only — it answers questions and explains code without ever modifying files.',
+    },
+    {
+      id: '09-2',
+      question: 'What is the recommended "mode escalation" pattern?',
+      options: [
+        'Agent → Plan → Ask',
+        'Plan → Ask → Agent',
+        'Ask → Plan → Agent',
+        'Always stay in Agent mode',
+      ],
+      correctIndex: 2,
+      explanation:
+        'Start with Ask to understand the problem, use Plan to get a reviewable step-by-step roadmap, then Agent to execute.',
+    },
+    {
+      id: '09-3',
+      question: 'When should you switch from Claude Sonnet to Claude Opus?',
+      options: [
+        'For quick one-off questions — Opus is faster',
+        'For complex architecture decisions or subtle bugs that need deep reasoning',
+        'For every task — Opus is always better',
+        'For simple renames and small edits',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Claude Opus has the strongest reasoning but is also the most expensive. Only upgrade to Opus when the task genuinely requires deep reasoning — don\'t overspend on simple tasks.',
+    },
+    {
+      id: '09-4',
+      question: 'What is the recommended structure for an effective prompt?',
+      options: [
+        'Task → Context → Constraints',
+        'Constraints → Task → Context',
+        'Context → Task → Constraints',
+        'Just describe the task — context is unnecessary',
+      ],
+      correctIndex: 2,
+      explanation:
+        'Context → Task → Constraints gives the AI the background it needs, a clear objective, and boundaries to work within.',
+    },
+    {
+      id: '09-5',
+      question: 'Your prompt is 500+ words describing 6 different changes. What should you do instead?',
+      options: [
+        'Send it as-is — the AI can handle long prompts',
+        'Break it into 2–3 focused messages, tackling one change at a time',
+        'Remove all context to make it shorter',
+        'Switch to a faster model to process it quicker',
+      ],
+      correctIndex: 1,
+      explanation:
+        'Mega-prompts cause the AI to lose focus. Break complex tasks into phases — plan first, then execute one change at a time.',
     },
   ],
 };

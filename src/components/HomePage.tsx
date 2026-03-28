@@ -15,9 +15,8 @@ export function HomePage() {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-2xl">☀️</span>
             <h1 className="text-xl font-bold text-gray-900">
-              Solar Product Academy
+              Solar DS Academy
             </h1>
           </div>
           <div className="flex items-center gap-4">

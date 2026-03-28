@@ -11,7 +11,7 @@ type: exercise
 ## Instructions
 
 1. Open **VS Code**
-2. Open the Copilot Chat panel (`Cmd+Shift+I`)
+2. Open the Copilot Chat panel (`Cmd+Shift+I` on macOS, `Ctrl+Shift+I` on Windows/Linux)
 3. Type: `@solar /initiate My First App`
 4. Wait for the project to scaffold, install dependencies, and open a live preview
 5. **Screenshot** the running app in the built-in browser

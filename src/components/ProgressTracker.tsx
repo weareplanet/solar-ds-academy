@@ -2,6 +2,8 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import { modules } from '@/lib/modules';
+import { CertificateGenerator } from '@/components/CertificateGenerator';
+import { useAuth } from '@/components/AuthGate';
 
 type ModuleStatus = 'not-started' | 'in-progress' | 'completed';
 
@@ -159,6 +161,7 @@ export function useProgress() {
 /** Standalone progress bar shown on the home page */
 export function ProgressTracker() {
   const { completedCount, totalModules, badgeLevel } = useProgress();
+  const { account } = useAuth();
   const pct = Math.round((completedCount / totalModules) * 100);
 
   const badges = [
@@ -202,6 +205,16 @@ export function ProgressTracker() {
           );
         })}
       </div>
+
+      {/* Certificate download */}
+      {badgeLevel !== 'none' && (
+        <div className="mt-4 pt-4 border-t border-gray-100">
+          <CertificateGenerator
+            userName={account.name || account.username}
+            badgeLevel={badgeLevel}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import GithubSlugger from 'github-slugger';
 import { AuthGate } from '@/components/AuthGate';
-import { ModulePage } from '@/components/ModulePage';
+import { ExercisePage } from '@/components/ExercisePage';
 import { type TopicHeading } from '@/components/TopicNav';
 import { modules } from '@/lib/modules';
 
@@ -24,7 +24,6 @@ function loadMarkdown(moduleId: string, file: string): string {
   }
 }
 
-/** Extract heading text and level from markdown source */
 function extractHeadings(md: string): TopicHeading[] {
   const headings: TopicHeading[] = [];
   const slugger = new GithubSlugger();
@@ -38,21 +37,21 @@ function extractHeadings(md: string): TopicHeading[] {
   return headings;
 }
 
-export default function ModuleRoute({ params }: { params: { id: string } }) {
-  const slidesSource = loadMarkdown(params.id, 'slides.md');
+export default function ExerciseRoute({ params }: { params: { id: string } }) {
+  const exerciseSource = loadMarkdown(params.id, 'exercise.md');
 
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 
-  const slidesContent = slidesSource ? (
-    <MDXRemote source={slidesSource} options={{ mdxOptions }} />
+  const exerciseContent = exerciseSource ? (
+    <MDXRemote source={exerciseSource} options={{ mdxOptions }} />
   ) : null;
 
-  const topicHeadings = extractHeadings(slidesSource);
+  const topicHeadings = extractHeadings(exerciseSource);
 
   return (
     <AuthGate>
-      <ModulePage
-        slidesContent={slidesContent}
+      <ExercisePage
+        exerciseContent={exerciseContent}
         topicHeadings={topicHeadings}
       />
     </AuthGate>
