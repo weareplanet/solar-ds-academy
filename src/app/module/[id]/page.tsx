@@ -38,8 +38,9 @@ function extractHeadings(md: string): TopicHeading[] {
   return headings;
 }
 
-export default function ModuleRoute({ params }: { params: { id: string } }) {
-  const slidesSource = loadMarkdown(params.id, 'slides.md');
+export default async function ModuleRoute({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const slidesSource = loadMarkdown(id, 'slides.md');
 
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 

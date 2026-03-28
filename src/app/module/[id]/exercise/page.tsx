@@ -37,8 +37,9 @@ function extractHeadings(md: string): TopicHeading[] {
   return headings;
 }
 
-export default function ExerciseRoute({ params }: { params: { id: string } }) {
-  const exerciseSource = loadMarkdown(params.id, 'exercise.md');
+export default async function ExerciseRoute({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const exerciseSource = loadMarkdown(id, 'exercise.md');
 
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 

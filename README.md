@@ -61,7 +61,7 @@ Before deploying, register a **Single-Page Application** in Azure Entra ID:
 1. Azure Portal → Entra ID → App registrations → New registration
 2. Name: **Solar DS Academy**
 3. Supported account types: **Single tenant** (weareplanet only)
-4. Redirect URI (SPA): `https://weareplanet.github.io/solar-ds-academy`
+4. Redirect URI (SPA): `https://friendly-adventure-3q7jm84.pages.github.io/solar-ds-academy`
 5. Copy the **Application (client) ID** and **Tenant ID**
 6. Set environment variables (or update `src/lib/msalConfig.ts`):
    ```
@@ -76,7 +76,7 @@ Deploys automatically via GitHub Actions on push to `main`. The workflow:
 1. Builds the Next.js static export
 2. Deploys to GitHub Pages
 
-**URL:** `https://weareplanet.github.io/solar-ds-academy`
+**URL:** [`https://friendly-adventure-3q7jm84.pages.github.io/solar-ds-academy`](https://friendly-adventure-3q7jm84.pages.github.io/solar-ds-academy)
 
 ### Enable GitHub Pages
 
