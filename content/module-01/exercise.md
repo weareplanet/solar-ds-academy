@@ -23,7 +23,7 @@ Before you begin, verify every item below. If any check fails, follow the fix li
 > **Luna message template** — copy and paste this into your Luna ticket (replace the placeholder with your GitHub username):
 >
 > ```
-> Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+> Hello, I need access to the @weareplanet GitHub organisation to use the @solar VS Code extension. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
 > ```
 | 6 | **Solar DS Copilot installed** | In the Extensions panel, search "Solar" — you should see "Solar DS Copilot" listed | Download the `.vsix` from [GitHub Releases](https://github.com/weareplanet/solar-ds-copilot/releases), then Extensions panel → `...` menu → "Install from VSIX…" |
 
@@ -96,7 +96,7 @@ The `@weareplanet` scope isn't pointing to GitHub Packages. Run `@solar /initiat
 Your GitHub account doesn't have access to the `@weareplanet` organisation. [Open a ticket on Luna](https://luna.weareplanet.com/) with this message:
 
 ```
-Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+Hello, I need access to the @weareplanet GitHub organisation to use the @solar VS Code extension. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
 ```
 
 Then try again once access is granted.
