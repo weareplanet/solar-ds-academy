@@ -18,7 +18,13 @@ Before you begin, verify every item below. If any check fails, follow the fix li
 | 2 | **Node.js installed** | If you've never installed Node.js, download it now. Re-installing won't cause problems. | [Download Node.js](https://nodejs.org/) — pick the LTS option |
 | 3 | **GitHub Copilot Chat installed** | In VS Code, open the Extensions panel (puzzle-piece icon) and search "GitHub Copilot Chat" — it should say "Installed" | Search "GitHub Copilot Chat" in the Extensions panel and click Install |
 | 4 | **Signed in to GitHub** | Click the **Accounts** icon (bottom-left of VS Code) — your GitHub username should appear | Click Accounts → Sign in with GitHub |
-| 5 | **`@weareplanet` org access** | Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot) — you should see the repo page, not a 404 | [Request access on Luna](https://luna.weareplanet.com/?description=Hello%2C%20I%20need%20access%20to%20the%20%40weareplanet%20GitHub%20organisation%20for%20the%20Solar%20Product%20Academy%20training.%20My%20GitHub%20username%20is%3A%20%5BENTER%20YOUR%20GITHUB%20USERNAME%5D.%20Thank%20you!) (may take 1–2 days) |
+| 5 | **`@weareplanet` org access** | Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot) — you should see the repo page, not a 404 | [Open a ticket on Luna](https://luna.weareplanet.com/) using the message template below (may take 1–2 days) |
+
+> **Luna message template** — copy and paste this into your Luna ticket (replace the placeholder with your GitHub username):
+>
+> ```
+> Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+> ```
 | 6 | **Solar DS Copilot installed** | In the Extensions panel, search "Solar" — you should see "Solar DS Copilot" listed | Download the `.vsix` from [GitHub Releases](https://github.com/weareplanet/solar-ds-copilot/releases), then Extensions panel → `...` menu → "Install from VSIX…" |
 
 ## Instructions
@@ -87,7 +93,13 @@ The `@weareplanet` scope isn't pointing to GitHub Packages. Run `@solar /initiat
 
 ### "E403 Forbidden"
 
-Your GitHub account doesn't have access to the `@weareplanet` organisation. [Request access on Luna](https://luna.weareplanet.com/?description=Hello%2C%20I%20need%20access%20to%20the%20%40weareplanet%20GitHub%20organisation%20for%20the%20Solar%20Product%20Academy%20training.%20My%20GitHub%20username%20is%3A%20%5BENTER%20YOUR%20GITHUB%20USERNAME%5D.%20Thank%20you!) (the message is pre-filled — just add your GitHub username), then try again.
+Your GitHub account doesn't have access to the `@weareplanet` organisation. [Open a ticket on Luna](https://luna.weareplanet.com/) with this message:
+
+```
+Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+```
+
+Then try again once access is granted.
 
 ### "The preview didn't open"
 
@@ -115,4 +127,4 @@ Copilot can explain most errors in plain English and suggest fixes. You can also
 
 This checks your environment and tells you if anything is misconfigured.
 
-**Still stuck?** Contact [felipe.castro@weareplanet.com](mailto:felipe.castro@weareplanet.com) — happy to help.
+**Still stuck?** [Fill out the feedback form](https://forms.cloud.microsoft/e/hW2f7Ht3pQ) and we'll get back to you.
