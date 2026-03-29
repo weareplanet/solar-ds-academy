@@ -94,13 +94,7 @@ export function ModulePage({ slidesContent, topicHeadings = [] }: ModulePageProp
             </div>
           </section>
 
-          {/* Video embed placeholder */}
-          <section className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">🎬 Video Walkthrough</h2>
-            <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <p className="text-gray-400">Video embed will appear here</p>
-            </div>
-          </section>
+
 
           {/* Exercise link */}
           <section className="bg-white rounded-xl border border-gray-200 p-6 flex items-center justify-between">
