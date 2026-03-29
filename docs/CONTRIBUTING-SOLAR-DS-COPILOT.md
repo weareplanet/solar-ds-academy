@@ -29,12 +29,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to preview the site.
 
-### 3. Verify Before Pushing
+### 3. Validate on Live Preview Before Committing
 
-1. Run `npm run build` — the static export must succeed with no errors
-2. Check the browser at `http://localhost:3000` — navigate through modules, exercises, and quizzes
-3. If you changed quiz data (`src/lib/quizData.ts`), verify all questions render and score correctly
-4. If you changed module content (`content/module-XX/`), verify markdown renders correctly on the module and exercise pages
+**Every change must be visually validated in the running dev server before committing.** Do not commit based on build success alone.
+
+1. Run `npm run dev` (or confirm it's already running)
+2. Open `http://localhost:3000` in the browser
+3. Navigate to every page affected by your change and confirm it renders correctly:
+   - Module slides pages (`/module/XX`)
+   - Exercise pages (`/module/XX/exercise`)
+   - Quiz pages (`/quiz/XX`)
+   - Home page (`/`) if module metadata changed
+4. If you see a 500 error, clear the cache (`rm -rf .next`) and restart the dev server
+5. Run `npm run build` — the static export must succeed with no errors
 
 ### 4. Push & Open a Pull Request
 
