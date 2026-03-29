@@ -26,7 +26,7 @@ const quizData: Record<string, QuizQuestion[]> = {
       ],
       correctIndex: 2,
       explanation:
-        '@solar /initiate creates a complete new project with 24 files, navigation, theming, and a live preview.',
+        '@solar /initiate creates a complete new project with 20+ files, navigation, theming, and a live preview.',
     },
     {
       id: '01-3',
@@ -47,7 +47,7 @@ const quizData: Record<string, QuizQuestion[]> = {
       options: [
         'A single HTML file',
         'A Figma design',
-        'A complete app with ~24 files, navigation, and theming',
+        'A complete app with 20+ files, navigation, and theming',
         'A PDF mockup',
       ],
       correctIndex: 2,
