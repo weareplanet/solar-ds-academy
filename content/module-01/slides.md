@@ -30,7 +30,7 @@ Before starting, make sure you have all of these installed and configured:
 | **GitHub account** | Authentication + access to internal packages | — | Must be a member of the `@weareplanet` organisation |
 | **Solar DS Copilot** | The @Solar extension itself | Latest | Download `.vsix` from [GitHub Releases](https://github.com/weareplanet/solar-ds-copilot/releases) |
 
-> **How to check your org access:** Go to [github.com/orgs/weareplanet/repositories](https://github.com/orgs/weareplanet/repositories). If you can see a long list of repositories, you're in. If not, open a ticket on [Luna](https://luna.weareplanet.com/) to request access. This may take a day or two, so do it early.
+> **How to check your org access:** Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot). If you can see the repository page, you're in. If you see a 404 "Not Found" page, you need to request access — [open a ticket on Luna](https://luna.weareplanet.com/?description=Hello%2C%20I%20need%20access%20to%20the%20%40weareplanet%20GitHub%20organisation%20for%20the%20Solar%20Product%20Academy%20training.%20My%20GitHub%20username%20is%3A%20%5BENTER%20YOUR%20GITHUB%20USERNAME%5D.%20Thank%20you!) (the message is pre-filled — just add your GitHub username). This may take a day or two, so do it early.
 
 ## Quick VS Code Orientation
 
@@ -50,7 +50,7 @@ Download and install from [code.visualstudio.com](https://code.visualstudio.com/
 
 Download the **LTS version** from [nodejs.org](https://nodejs.org/).
 
-> **Already have it?** Open a terminal and type `node -v`. If you see `v18` or higher, you're good.
+> **Already have it?** If you're not sure, just install it from the link above — installing it again won't cause any problems.
 
 ### 3. Install GitHub Copilot Chat
 
@@ -68,9 +68,11 @@ Click the **Accounts** icon (bottom-left corner of VS Code) → **Sign in with G
 4. Click the **`...`** menu at the top of the Extensions panel → **Install from VSIX…**
 5. Select the `.vsix` file you downloaded
 
-### 6. Create an Empty Folder
+### 6. Open a Folder in VS Code
 
-Create a new, empty folder anywhere on your computer (e.g., `My First App` on your Desktop). Then in VS Code: **File → Open Folder** and select it.
+For the best experience, create a **new, empty folder** on your computer (e.g., `My First App` on your Desktop) and open it in VS Code: **File → Open Folder**.
+
+> **Tip:** An empty folder is ideal, but not strictly required — @Solar can also set up a project inside an existing folder. It only creates new files and never overwrites existing ones.
 
 ## Your First Command: `/initiate`
 
@@ -86,7 +88,7 @@ Open the Copilot Chat panel (`Cmd+Shift+I` on Mac, `Ctrl+Shift+I` on Windows) an
 
 1. **Authentication check** — @Solar verifies your GitHub sign-in and org access. If your npm authentication isn't configured yet, it will set it up automatically.
 2. **Project scaffold** — @Solar creates 20+ files: pages, navigation, theming, sample data, configuration, and more.
-3. **Dependency installation** — You'll see terminal activity as packages are installed. This can take 30–60 seconds the first time.
+3. **Dependency installation** — VS Code will show progress as packages are installed. This can take 30–60 seconds the first time.
 4. **Live preview opens** — A built-in browser panel opens inside VS Code showing your running app at `localhost:5173`.
 
 > **This takes about 1–2 minutes the first time.** Subsequent projects are faster because packages are cached.
@@ -134,3 +136,23 @@ You don't actually _have_ to run `/initiate` first. If your folder is empty and 
 | **Live preview** | A built-in browser inside VS Code that shows your running app |
 | **Auto-initiate** | If you describe a page in an empty folder, @Solar sets up the project automatically |
 | **File safety** | @Solar only creates new files — it never overwrites your existing work |
+
+## Need Help?
+
+If something isn't working, try typing this in the Copilot Chat panel:
+
+```
+@solar /status
+```
+
+This shows your environment status — whether you're signed in, whether the preview is running, and more.
+
+You can also ask Copilot (without the `@solar` prefix) for general help. Just paste any error message into the chat and ask what it means:
+
+```
+I'm getting an error that says "npm ERR! 401" — what does this mean and how do I fix it?
+```
+
+Copilot can help you understand and fix most common issues.
+
+**Still stuck?** Contact [felipe.castro@weareplanet.com](mailto:felipe.castro@weareplanet.com) — happy to help.
