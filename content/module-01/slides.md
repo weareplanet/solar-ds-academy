@@ -30,7 +30,13 @@ Before starting, make sure you have all of these installed and configured:
 | **GitHub account** | Authentication + access to internal packages | — | Must be a member of the `@weareplanet` organisation |
 | **Solar DS Copilot** | The @Solar extension itself | Latest | Download `.vsix` from [GitHub Releases](https://github.com/weareplanet/solar-ds-copilot/releases) |
 
-> **How to check your org access:** Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot). If you can see the repository page, you're in. If you see a 404 "Not Found" page, you need to request access — [open a ticket on Luna](https://luna.weareplanet.com/?description=Hello%2C%20I%20need%20access%20to%20the%20%40weareplanet%20GitHub%20organisation%20for%20the%20Solar%20Product%20Academy%20training.%20My%20GitHub%20username%20is%3A%20%5BENTER%20YOUR%20GITHUB%20USERNAME%5D.%20Thank%20you!) (the message is pre-filled — just add your GitHub username). This may take a day or two, so do it early.
+> **How to check your org access:** Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot). If you can see the repository page, you're in. If you see a 404 "Not Found" page, you need to request access — [open a ticket on Luna](https://luna.weareplanet.com/) and paste this message:
+>
+> ```
+> Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+> ```
+>
+> This may take a day or two, so do it early.
 
 ## Quick VS Code Orientation
 
@@ -155,4 +161,4 @@ I'm getting an error that says "npm ERR! 401" — what does this mean and how do
 
 Copilot can help you understand and fix most common issues.
 
-**Still stuck?** Contact [felipe.castro@weareplanet.com](mailto:felipe.castro@weareplanet.com) — happy to help.
+**Still stuck?** [Fill out the feedback form](https://forms.cloud.microsoft/e/hW2f7Ht3pQ) — we'll get back to you.
