@@ -138,68 +138,68 @@ const quizData: Record<string, QuizQuestion[]> = {
   '03': [
     {
       id: '03-1',
-      question: "How do you show Copilot what you're looking at?",
+      question: 'What must you turn on before using visual context features (#browser, element selection)?',
       options: [
-        'Copy the page URL',
-        'Type #browser or use "Select Element"',
-        'Take a phone photo',
-        'Describe the layout in detail',
+        'The VS Code dark theme',
+        'The </> Share with Agent toggle in the Simple Browser toolbar',
+        'The Terminal panel',
+        'A browser extension',
       ],
       correctIndex: 1,
       explanation:
-        'Typing #browser attaches a screenshot of the live preview to your chat message, giving Copilot visual context.',
+        'The </> Share with Agent toggle (top-right of Simple Browser) allows Copilot to read your live preview. Without it, #browser and element selection have no page context.',
     },
     {
       id: '03-2',
-      question: 'Does @Solar need you to specify CSS or component names?',
+      question: 'How do you give @solar feedback about a specific UI element?',
       options: [
-        'Yes, always',
-        'Only for complex layouts',
-        'No, just describe what you want visually',
-        'Only for colors',
+        'Take a phone photo and paste it',
+        'Click the ↖ pointer icon in Simple Browser, click the element, then describe the change',
+        'Type the element\'s CSS class name',
+        'Open the browser DevTools',
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       explanation:
-        '@Solar translates your natural language descriptions into the correct CSS and components automatically.',
+        'The ↖ "Add element to chat" pointer lets you click on a specific element in the preview. It\'s added to your chat context so @solar knows exactly what you\'re referring to.',
     },
     {
       id: '03-3',
-      question: 'Can you ask @Solar to make a page responsive?',
+      question: 'Why do small, one-change-at-a-time prompts work better than big multi-change prompts?',
       options: [
-        'No, all pages are fixed-width',
-        'Yes',
-        'Only with CSS knowledge',
-        'Only on mobile devices',
+        'Because @solar has a character limit',
+        'Because each change is easier for the AI to understand and apply accurately',
+        'Because it uses less internet bandwidth',
+        'Because VS Code can only process one file at a time',
       ],
       correctIndex: 1,
       explanation:
-        'You can simply ask @Solar to make any page responsive, and it will add mobile-friendly layouts.',
+        'Focused prompts are more accurate. When you ask for many changes at once, some may be missed or applied inconsistently. One change per prompt, then review.',
     },
     {
       id: '03-4',
-      question: 'What happens to existing pages when you modify one?',
+      question: 'What does typing #browser in your chat message do?',
       options: [
-        'All pages are rebuilt',
-        'Other pages may break',
-        "They're untouched",
-        'They lose their styling',
-      ],
-      correctIndex: 2,
-      explanation:
-        '@Solar only modifies the files you ask it to change. Other pages remain untouched.',
-    },
-    {
-      id: '03-5',
-      question: "What's the recommended refinement approach?",
-      options: [
-        'Make all changes at once in one big prompt',
-        'Small iterative changes, one at a time',
-        'Describe the full page from scratch each time',
-        'Only refine at the end',
+        'Opens a new Chrome tab',
+        'Attaches a screenshot of the live preview, giving @solar visual context',
+        'Runs the app in a phone emulator',
+        'Saves the page as a PDF',
       ],
       correctIndex: 1,
       explanation:
-        'Small, focused prompts work best. Each change is easier for the AI to understand and apply correctly.',
+        '#browser attaches a screenshot of the Simple Browser content to your message, so @solar can see the current state of your page alongside your request.',
+    },
+    {
+      id: '03-5',
+      question: 'If the Simple Browser panel gets closed, how do you reopen it?',
+      options: [
+        'Restart VS Code',
+        'Re-run @solar /initiate',
+        'Type @solar /preview in the chat',
+        'Press Ctrl+Shift+B',
+      ],
+      correctIndex: 2,
+      explanation:
+        '@solar /preview restarts the dev server if needed and reopens the Simple Browser panel — no need to restart anything.',
     },
   ],
   '04': [
