@@ -67,7 +67,7 @@ Your exercise is complete when you can see **all of the following** in VS Code:
 
 ## Deliverable
 
-Take a screenshot showing the full VS Code window with the app running in the built-in browser. Upload it via [Microsoft Forms](TODO_FORMS_LINK).
+Take a screenshot showing the full VS Code window with the app running in the built-in browser. Upload it via [Microsoft Forms](https://forms.cloud.microsoft/e/G9AWKSYxQ0).
 
 ## Troubleshooting
 
