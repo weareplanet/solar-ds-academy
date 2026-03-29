@@ -5,6 +5,8 @@ module: 1
 
 # Getting Started: Your Toolkit
 
+![Module 1 Cover](/images/solardscopilot.png)
+
 ## What is @Solar?
 
 @Solar is a **VS Code extension** that lets you build fully functional web prototypes by describing what you want in plain English. No coding required.
@@ -33,7 +35,7 @@ Before starting, make sure you have all of these installed and configured:
 > **How to check your org access:** Go to [github.com/weareplanet/solar-ds-copilot](https://github.com/weareplanet/solar-ds-copilot). If you can see the repository page, you're in. If you see a 404 "Not Found" page, you need to request access — [open a ticket on Luna](https://luna.weareplanet.com/) and paste this message (replace the placeholder with your GitHub username):
 >
 > ```
-> Hello, I need access to the @weareplanet GitHub organisation for the Solar Product Academy training. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+> Hello, I need access to the @weareplanet GitHub organisation to use the @solar VS Code extension. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
 > ```
 >
 > This may take a day or two, so do it early.
@@ -45,6 +47,8 @@ You'll explore VS Code in depth in **Module 7**. For now, you only need to know 
 - **Sidebar** (left): Where you find your files, extensions, and the chat icon
 - **Editor** (center): The main area — this is where file content and the live preview appear
 - **Copilot Chat panel**: Opens with `Cmd+Shift+I` (Mac) / `Ctrl+Shift+I` (Windows) or by clicking the chat icon in the sidebar. This is where you talk to @Solar.
+
+![VS Code with the Copilot Chat panel on the left and the live preview on the right](/images/vscode.png)
 
 ## Step-by-Step Setup
 
