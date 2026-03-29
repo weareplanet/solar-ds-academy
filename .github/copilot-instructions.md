@@ -56,3 +56,15 @@ Quiz data lives in `src/lib/quizData.ts`.
 - Every feature claim must be verifiable from the solar-ds-copilot source code
 - Use `@solar` (not "the extension" or "Solar DS Copilot") when referring to user-facing interactions
 - Screenshots and step-by-step instructions are preferred over text descriptions
+
+## Development Workflow
+
+Always follow this workflow when making changes:
+
+1. **Branch:** Create a branch (`content/module-XX`, `fix/...`, or `feat/...`) — never commit directly to `main`
+2. **Build:** Run `npm run build` — the static export must succeed with no errors
+3. **Live preview:** Run `npm run dev`, open `http://localhost:3000`, and visually verify every affected page renders correctly before committing
+4. **Commit & push** the branch
+5. **Open a PR** against `main`
+
+**Never skip the live-preview validation step.** Build success alone is not sufficient — pages can still 500 at runtime due to stale caches or rendering errors. If you see a 500 error, clear the cache (`rm -rf .next`) and restart the dev server.
