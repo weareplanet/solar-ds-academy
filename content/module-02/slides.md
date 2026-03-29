@@ -5,6 +5,11 @@ module: 2
 
 # Building Screens with Natural Language
 
+<video controls width="100%" style={{borderRadius: '0.75rem', marginBottom: '1.5rem'}}>
+  <source src="/images/solar-ds-profile-page.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## The Prompt → Result Loop
 
 With @Solar, building a page is a conversation:

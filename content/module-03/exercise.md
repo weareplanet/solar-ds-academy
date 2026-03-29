@@ -22,27 +22,27 @@ Complete **at least 5 refinements**, covering each of these categories:
 ### 1. Layout or Spacing Change
 Use `#browser` to show @solar the current layout, then ask for a spacing or alignment fix.
 
-> Example: *"#browser the stat cards are too cramped — add more space between them and make them equal width"*
+> Example: *#browser the stat cards are too cramped — add more space between them and make them equal width*
 
 ### 2. Component or Data Change
 Add, remove, or swap a component on the page.
 
-> Example: *"add a search field and a status dropdown filter above the data table"*
+> Example: *add a search field and a status dropdown filter above the data table*
 
 ### 3. Element-Level Change (using ↖ Add Element to Chat)
 Click the **↖ pointer icon** in the Simple Browser toolbar, click on a specific element, then describe the change.
 
-> Example: Click on the chart → *"change this to a line chart with a smooth curve"*
+> Example: Click on the chart → *change this to a line chart with a smooth curve*
 
 ### 4. Responsive Layout Fix
 Ask @solar to make the page work better on smaller screens.
 
-> Example: *"make this page responsive — cards should stack on mobile and the chart should be full width"*
+> Example: *make this page responsive — cards should stack on mobile and the chart should be full width*
 
 ### 5. Visual Polish
 Fix typography, icons, colors, or any other visual detail to make the page demo-ready.
 
-> Example: *"make the page title larger, add a subtitle showing today's date, and add an Export button aligned right"*
+> Example: *make the page title larger, add a subtitle showing today's date, and add an Export button aligned right*
 
 ### 6+ More (optional)
 Continue refining until you're satisfied. Most pages need 5–8 iterations to reach presentation quality.
