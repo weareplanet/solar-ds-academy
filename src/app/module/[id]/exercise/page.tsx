@@ -9,6 +9,7 @@ import { AuthGate } from '@/components/AuthGate';
 import { ExercisePage } from '@/components/ExercisePage';
 import { type TopicHeading } from '@/components/TopicNav';
 import { modules } from '@/lib/modules';
+import { mdxComponents } from '@/lib/mdxComponents';
 
 export function generateStaticParams() {
   return modules.map((m) => ({ id: m.id }));
@@ -44,7 +45,7 @@ export default async function ExerciseRoute({ params }: { params: Promise<{ id: 
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 
   const exerciseContent = exerciseSource ? (
-    <MDXRemote source={exerciseSource} options={{ mdxOptions }} />
+    <MDXRemote source={exerciseSource} options={{ mdxOptions }} components={mdxComponents} />
   ) : null;
 
   const topicHeadings = extractHeadings(exerciseSource);

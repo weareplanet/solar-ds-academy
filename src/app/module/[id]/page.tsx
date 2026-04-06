@@ -9,6 +9,7 @@ import { AuthGate } from '@/components/AuthGate';
 import { ModulePage } from '@/components/ModulePage';
 import { type TopicHeading } from '@/components/TopicNav';
 import { modules } from '@/lib/modules';
+import { mdxComponents } from '@/lib/mdxComponents';
 
 export function generateStaticParams() {
   return modules.map((m) => ({ id: m.id }));
@@ -45,7 +46,7 @@ export default async function ModuleRoute({ params }: { params: Promise<{ id: st
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 
   const slidesContent = slidesSource ? (
-    <MDXRemote source={slidesSource} options={{ mdxOptions }} />
+    <MDXRemote source={slidesSource} options={{ mdxOptions }} components={mdxComponents} />
   ) : null;
 
   const topicHeadings = extractHeadings(slidesSource);
