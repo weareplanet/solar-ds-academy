@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   title: 'Solar DS Academy',
   description:
     'Learn to build prototypes with @Solar — no coding required. For PMs, POs, and Product Designers at Planet.',
-  icons: {
-    icon: '/favicon.png',
-  },
 };
 
 export default function RootLayout({
@@ -21,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.png`} />
+      </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
