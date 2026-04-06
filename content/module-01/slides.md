@@ -166,3 +166,38 @@ I'm getting an error that says "npm ERR! 401" — what does this mean and how do
 Copilot can help you understand and fix most common issues.
 
 **Still stuck?** [Fill out the feedback form](https://forms.cloud.microsoft/e/hW2f7Ht3pQ) and we'll get back to you.
+
+## Optional: Upgrade Your GitHub Copilot Licence
+
+> **This step is not required.** The standard GitHub Copilot licence is fully sufficient to complete all modules in this course. This is a purely optional upgrade for those who want to get even more out of the tools.
+
+Upgrading your licence unlocks two key benefits:
+
+- **More AI models** — access to advanced models such as Claude Sonnet and GPT-4o, which tend to produce higher-quality code and more accurate responses
+- **Higher usage quota** — generate more prototypes and iterate faster without hitting daily limits
+
+### Step 1 — Open a Luna ticket
+
+Go to [luna.weareplanet.com](https://luna.weareplanet.com/) and open a new ticket with the following title and message:
+
+**Title:** `Request: Upgraded GitHub Copilot licence — Solar DS Academy`
+
+**Message:**
+
+```
+Hello, I would like to request an upgraded GitHub Copilot licence to support me while design new solutions using our Solar Design System. An upgraded licence provides access to additional AI models and a higher usage quota, which is paramount for delivering my work 10x faster and better. This request requires ELT approval or approval from Thiago Charão and I will handle it once I get the ticket. My GitHub username is: [YOUR GITHUB USERNAME]. Thank you!
+```
+
+> Replace `[YOUR GITHUB USERNAME]` with your actual GitHub username before sending.
+
+### Step 2 — Contact Thiago Charão on Teams
+
+Once your Luna ticket is created, open **Microsoft Teams**, find **Thiago Charão**, and send him the ticket link asking for approval:
+
+```
+Hi Thiago! I've opened a Luna ticket to request an upgraded GitHub Copilot licence as part of the Solar DS Academy. Could you approve it when you get a chance? Here's the link: [LUNA TICKET LINK]. Thank you!
+```
+
+> Replace `[LUNA TICKET LINK]` with the URL of the ticket you just created.
+
+This request requires approval from **ELT or Thiago Charão** — reaching out directly on Teams is the fastest way to get it moving.
