@@ -6,7 +6,7 @@ import { useAuth } from '@/components/AuthGate';
 import { ProgressTracker, useProgress } from '@/components/ProgressTracker';
 
 export function HomePage() {
-  const { account, logout } = useAuth();
+  const { account } = useAuth();
   const { getModuleStatus } = useProgress();
 
   return (
@@ -19,17 +19,7 @@ export function HomePage() {
               Solar DS Academy
             </h1>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-500">
-              {account.name || account.username}
-            </span>
-            <button
-              onClick={logout}
-              className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              Sign out
-            </button>
-          </div>
+          <div />
         </div>
       </header>
 
