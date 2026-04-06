@@ -47,7 +47,9 @@ export function ExercisePage({ exerciseContent, topicHeadings = [] }: ExercisePa
           >
             ← Back to Module {mod.number}
           </Link>
-          <div />
+          <span className="text-sm text-gray-500">
+            {account.name || account.username}
+          </span>
         </div>
       </header>
 
