@@ -17,7 +17,7 @@ interface ModulePageProps {
 export function ModulePage({ slidesContent, topicHeadings = [] }: ModulePageProps) {
   const params = useParams();
   const id = params.id as string;
-  const { account, logout } = useAuth();
+  const { account } = useAuth();
   const { markStarted, markCompleted, getModuleStatus } = useProgress();
 
   const mod = modules.find((m) => m.id === id);
@@ -60,9 +60,7 @@ export function ModulePage({ slidesContent, topicHeadings = [] }: ModulePageProp
           >
             ← Back to course
           </Link>
-          <span className="text-sm text-gray-500">
-            {account.name || account.username}
-          </span>
+          <div />
         </div>
       </header>
 
