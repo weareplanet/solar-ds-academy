@@ -45,8 +45,24 @@ export default async function ModuleRoute({ params }: { params: Promise<{ id: st
 
   const mdxOptions = { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] };
 
-  const slidesContent = slidesSource ? (
-    <MDXRemote source={slidesSource} options={{ mdxOptions }} components={mdxComponents} />
+  // Prefix any root-anchored media URLs (src="/...") with NEXT_PUBLIC_BASE_PATH
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  function prefixRootSrcs(md: string): string {
+    if (!basePath) return md;
+    return md.replace(/src=\"\/([^\"]*)\"/g, (_m, p1) => {
+      // If already prefixed, leave it
+      const withoutLeading = p1.replace(/^\//, '');
+      if (withoutLeading.startsWith(basePath.replace(/^\//, ''))) {
+        return `src="/${p1}"`;
+      }
+      return `src="${basePath}/${p1}"`;
+    });
+  }
+
+  const slidesSourceForRender = slidesSource ? prefixRootSrcs(slidesSource) : '';
+
+  const slidesContent = slidesSourceForRender ? (
+    <MDXRemote source={slidesSourceForRender} options={{ mdxOptions }} components={mdxComponents} />
   ) : null;
 
   const topicHeadings = extractHeadings(slidesSource);
