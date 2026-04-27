@@ -29,10 +29,21 @@ export function HomePage() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Build prototypes with @Solar
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             A hands-on course for PMs, POs, and Product Designers.
             No coding required — just describe what you want in plain English.
           </p>
+          <video
+            controls
+            className="w-full max-w-3xl mx-auto rounded-xl shadow-lg"
+            style={{ display: 'block' }}
+          >
+            <source
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/solar-ds-profile-page.mp4`}
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </section>
 
         {/* Progress overview */}
