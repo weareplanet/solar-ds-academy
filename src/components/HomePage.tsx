@@ -36,7 +36,6 @@ export function HomePage() {
           <video
             controls
             className="w-full max-w-3xl mx-auto rounded-xl shadow-lg"
-            style={{ display: 'block' }}
           >
             <source
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/solar-ds-profile-page.mp4`}
